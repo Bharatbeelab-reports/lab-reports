@@ -3,60 +3,450 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bharat Bee Lab Reports</title>
+
+<title>Bharat Bee | Lab Test Reports</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f7f4e8;
-    text-align:center;
+
+background:linear-gradient(135deg,#fffdf5,#fff7df,#fef6d0);
+
+min-height:100vh;
+
+color:#222;
+
+}
+
+header{
+
+padding:60px 20px 30px;
+
+text-align:center;
+
+}
+
+header img{
+
+width:180px;
+
+max-width:90%;
+
+margin-bottom:20px;
+
+filter:drop-shadow(0 15px 25px rgba(0,0,0,.15));
+
+}
+
+header h1{
+
+font-size:42px;
+
+font-weight:800;
+
+color:#157347;
+
+margin-bottom:10px;
+
+}
+
+header p{
+
+font-size:18px;
+
+color:#555;
+
+}
+
+.search{
+
+max-width:700px;
+
+margin:35px auto;
+
+padding:0 20px;
+
+}
+
+.search input{
+
+width:100%;
+
+padding:18px 22px;
+
+border-radius:60px;
+
+border:none;
+
+font-size:16px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+outline:none;
+
 }
 
 .container{
-    max-width:700px;
-    margin:50px auto;
-    padding:20px;
+
+max-width:900px;
+
+margin:auto;
+
+padding:20px;
+
+display:grid;
+
+gap:22px;
+
 }
 
-h1{
-    color:#2e7d32;
+.card{
+
+background:white;
+
+border-radius:22px;
+
+padding:22px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+transition:.35s;
+
+border:1px solid rgba(255,180,0,.12);
+
+}
+
+.card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 18px 45px rgba(0,0,0,.15);
+
+}
+
+.left{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+}
+
+.icon{
+
+width:65px;
+
+height:65px;
+
+border-radius:18px;
+
+background:linear-gradient(135deg,#ffd54f,#ffb300);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:28px;
+
+}
+
+.left h2{
+
+font-size:22px;
+
+margin-bottom:5px;
+
+}
+
+.left span{
+
+font-size:14px;
+
+color:#777;
+
 }
 
 .btn{
-    display:block;
-    background:#ffb300;
-    color:#000;
-    padding:15px;
-    margin:15px 0;
-    text-decoration:none;
-    border-radius:12px;
-    font-size:18px;
-    font-weight:bold;
+
+background:#157347;
+
+padding:14px 26px;
+
+border-radius:50px;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
 }
 
 .btn:hover{
-    background:#ffa000;
+
+background:#0f5d39;
+
 }
+
+footer{
+
+margin-top:70px;
+
+padding:40px 20px;
+
+text-align:center;
+
+color:#666;
+
+font-size:15px;
+
+}
+
+footer strong{
+
+color:#157347;
+
+}
+
+@media(max-width:768px){
+
+.card{
+
+flex-direction:column;
+
+text-align:center;
+
+gap:20px;
+
+}
+
+.left{
+
+flex-direction:column;
+
+}
+
+header h1{
+
+font-size:32px;
+
+}
+
+}
+
 </style>
 
 </head>
 
 <body>
 
-<div class="container">
+<header>
 
-<h1>🍯 Bharat Bee</h1>
+<img src="logo.webp">
 
-<h2>Lab Test Reports</h2>
+<h1>Bharat Bee</h1>
 
-<a class="btn" href="#">Ajwain Honey</a>
+<p>Certified Lab Test Reports</p>
 
-<a class="btn" href="#">Mustard Honey</a>
+</header>
 
-<a class="btn" href="#">Himalayan Forest Honey</a>
+<div class="search">
+
+<input type="text" id="search" placeholder="Search Honey Report...">
 
 </div>
 
+<div class="container">
+
+<!-- REPORTS START -->
+    <div class="card">
+<div class="left">
+<div class="icon">🍯</div>
+<div>
+<h2>Ajwain Honey</h2>
+<span>Equinox Labs Certified Report</span>
+</div>
+</div>
+<a class="btn" href="Ajwain Honey.pdf" target="_blank">View Report</a>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">🍯</div>
+<div>
+<h2>Himalayan Forest Honey</h2>
+<span>Equinox Labs Certified Report</span>
+</div>
+</div>
+<a class="btn" href="Himalayan Forest Honey.pdf" target="_blank">View Report</a>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">🍯</div>
+<div>
+<h2>Mustard Honey</h2>
+<span>Equinox Labs Certified Report</span>
+</div>
+</div>
+<a class="btn" href="Mustard Honey.pdf" target="_blank">View Report</a>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">🍯</div>
+<div>
+<h2>Lychee Honey</h2>
+<span>Equinox Labs Certified Report</span>
+</div>
+</div>
+<a class="btn" href="Lychee Honey.pdf" target="_blank">View Report</a>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">🍯</div>
+<div>
+<h2>Jamun Honey</h2>
+<span>Equinox Labs Certified Report</span>
+</div>
+</div>
+<a class="btn" href="Jamun Honey.pdf" target="_blank">View Report</a>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">🍯</div>
+<div>
+<h2>Sunflower Honey</h2>
+<span>Equinox Labs Certified Report</span>
+</div>
+</div>
+<a class="btn" href="Sunflower Honey.pdf" target="_blank">View Report</a>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">🍯</div>
+<div>
+<h2>Tulsi Honey</h2>
+<span>Equinox Labs Certified Report</span>
+</div>
+</div>
+<a class="btn" href="Tulsi Honey.pdf" target="_blank">View Report</a>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">🍯</div>
+<div>
+<h2>Coriander Honey</h2>
+<span>Equinox Labs Certified Report</span>
+</div>
+</div>
+<a class="btn" href="Coriander Honey.pdf" target="_blank">View Report</a>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">🍯</div>
+<div>
+<h2>Fennel Honey</h2>
+<span>Equinox Labs Certified Report</span>
+</div>
+</div>
+<a class="btn" href="Fennel Honey.pdf" target="_blank">View Report</a>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">🍯</div>
+<div>
+<h2>Sesame Honey</h2>
+<span>Equinox Labs Certified Report</span>
+</div>
+</div>
+<a class="btn" href="Sesame Honey.pdf" target="_blank">View Report</a>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">🍯</div>
+<div>
+<h2>Wild Forest Honey</h2>
+<span>Equinox Labs Certified Report</span>
+</div>
+</div>
+<a class="btn" href="Wild Forest Honey.pdf" target="_blank">View Report</a>
+</div>
+
+</div>
+<footer>
+
+<strong>Bharat Bee</strong><br><br>
+
+Pure Honey • Pure Life
+
+<br><br>
+
+© 2026 Bharat Bee. All Rights Reserved.
+
+</footer>
+
+<script>
+
+const search=document.getElementById("search");
+
+search.addEventListener("keyup",function(){
+
+let value=this.value.toLowerCase();
+
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(function(card){
+
+let text=card.innerText.toLowerCase();
+
+if(text.indexOf(value)>-1){
+
+card.style.display="flex";
+
+}else{
+
+card.style.display="none";
+
+}
+
+});
+
+});
+
+</script>
+
 </body>
+
 </html>
