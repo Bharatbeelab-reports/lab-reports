@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bharat Bee | Lab Test Reports</title>
+<title>Bharat Bee | Certified Lab Test Reports</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 <style>
 
@@ -20,117 +26,254 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 
-background:linear-gradient(135deg,#fffdf5,#fff7df,#fef6d0);
+background:
 
-min-height:100vh;
+linear-gradient(rgba(255,251,238,.96),rgba(255,251,238,.96)),
+
+url("https://www.transparenttextures.com/patterns/honey-im-subtle.png");
+
+background-color:#fffdf4;
+
+overflow-x:hidden;
 
 color:#222;
 
 }
 
-header{
-
-padding:60px 20px 30px;
-
-text-align:center;
-
-}
-
-header img{
-
-width:180px;
-
-max-width:90%;
-
-margin-bottom:20px;
-
-filter:drop-shadow(0 15px 25px rgba(0,0,0,.15));
-
-}
-
-header h1{
-
-font-size:42px;
-
-font-weight:800;
-
-color:#157347;
-
-margin-bottom:10px;
-
-}
-
-header p{
-
-font-size:18px;
-
-color:#555;
-
-}
-
-.search{
-
-max-width:700px;
-
-margin:35px auto;
-
-padding:0 20px;
-
-}
-
-.search input{
+.container{
 
 width:100%;
 
-padding:18px 22px;
-
-border-radius:60px;
-
-border:none;
-
-font-size:16px;
-
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-outline:none;
-
-}
-
-.container{
-
-max-width:900px;
+max-width:1200px;
 
 margin:auto;
 
 padding:20px;
 
-display:grid;
+}
 
-gap:22px;
+.hero{
+
+position:relative;
+
+text-align:center;
+
+padding-top:20px;
+
+padding-bottom:25px;
+
+}
+
+.logo{
+
+width:180px;
+
+display:block;
+
+margin:auto;
+
+margin-bottom:10px;
+
+}
+
+.hero h1{
+
+font-size:64px;
+
+font-weight:800;
+
+color:#0b7a3d;
+
+line-height:1.1;
+
+}
+
+.hero h2{
+
+font-size:30px;
+
+margin-top:10px;
+
+font-weight:600;
+
+color:#222;
+
+}
+
+.line{
+
+width:220px;
+
+height:3px;
+
+background:#f7b500;
+
+margin:18px auto;
+
+border-radius:20px;
+
+position:relative;
+
+}
+
+.line:after{
+
+content:"";
+
+width:14px;
+
+height:14px;
+
+background:#f7b500;
+
+border-radius:50%;
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+}
+
+.searchBox{
+
+max-width:760px;
+
+margin:35px auto;
+
+background:#fff;
+
+border-radius:60px;
+
+box-shadow:0 10px 40px rgba(0,0,0,.08);
+
+display:flex;
+
+align-items:center;
+
+padding:18px 26px;
+
+}
+
+.searchBox i{
+
+font-size:24px;
+
+color:#777;
+
+margin-right:15px;
+
+}
+
+.searchBox input{
+
+border:none;
+
+outline:none;
+
+font-size:18px;
+
+width:100%;
+
+background:transparent;
+
+}
+
+.cards{
+
+margin-top:40px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+    .hero::before{
+
+content:"";
+
+position:absolute;
+
+left:-120px;
+
+top:-40px;
+
+width:260px;
+
+height:260px;
+
+background:url("https://images.unsplash.com/photo-1560807707-8cc77767d783?q=80&w=600");
+
+background-size:cover;
+
+opacity:.12;
+
+border-radius:50%;
+
+filter:blur(2px);
+
+}
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+right:-80px;
+
+top:-30px;
+
+width:220px;
+
+height:220px;
+
+background:url("https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=600");
+
+background-size:cover;
+
+opacity:.10;
+
+border-radius:50%;
+
+filter:blur(2px);
 
 }
 
 .card{
 
-background:white;
+background:#fff;
 
 border-radius:22px;
 
-padding:22px;
-
 display:flex;
+
+align-items:center;
 
 justify-content:space-between;
 
-align-items:center;
+padding:18px 22px;
 
 box-shadow:0 12px 35px rgba(0,0,0,.08);
 
 transition:.35s;
 
-border:1px solid rgba(255,180,0,.12);
+border:1px solid rgba(245,181,0,.15);
+
+position:relative;
+
+overflow:hidden;
 
 }
 
@@ -138,7 +281,25 @@ border:1px solid rgba(255,180,0,.12);
 
 transform:translateY(-6px);
 
-box-shadow:0 18px 45px rgba(0,0,0,.15);
+box-shadow:0 18px 45px rgba(0,0,0,.16);
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:6px;
+
+height:100%;
+
+background:#f7b500;
 
 }
 
@@ -152,15 +313,15 @@ gap:18px;
 
 }
 
-.icon{
+.labIcon{
 
-width:65px;
+width:88px;
 
-height:65px;
+height:88px;
 
 border-radius:18px;
 
-background:linear-gradient(135deg,#ffd54f,#ffb300);
+background:#fff8ea;
 
 display:flex;
 
@@ -168,47 +329,165 @@ align-items:center;
 
 justify-content:center;
 
-font-size:28px;
+border:1px solid #f3d98a;
+
+flex-shrink:0;
 
 }
 
-.left h2{
+.labIcon img{
 
-font-size:22px;
+width:56px;
 
-margin-bottom:5px;
+height:56px;
 
-}
-
-.left span{
-
-font-size:14px;
-
-color:#777;
+object-fit:contain;
 
 }
 
-.btn{
+.info h3{
 
-background:#157347;
+font-size:33px;
 
-padding:14px 26px;
+font-weight:700;
 
-border-radius:50px;
+margin-bottom:6px;
 
-color:white;
+}
 
-text-decoration:none;
+.info p{
+
+font-size:17px;
+
+color:#666;
+
+margin-bottom:10px;
+
+}
+
+.badges{
+
+display:flex;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
+
+.badges span{
+
+font-size:15px;
+
+color:#157347;
 
 font-weight:600;
 
-transition:.3s;
+display:flex;
+
+align-items:center;
+
+gap:8px;
 
 }
 
-.btn:hover{
+.badges i{
 
-background:#0f5d39;
+color:#f7b500;
+
+}
+
+.viewBtn{
+
+background:#0f7a42;
+
+color:#fff;
+
+text-decoration:none;
+
+padding:17px 38px;
+
+border-radius:50px;
+
+font-size:18px;
+
+font-weight:700;
+
+transition:.30s;
+
+box-shadow:0 8px 20px rgba(15,122,66,.25);
+
+}
+
+.viewBtn:hover{
+
+background:#095f31;
+
+transform:scale(1.05);
+
+}
+
+.bgHoney{
+
+position:fixed;
+
+right:0;
+
+top:0;
+
+width:180px;
+
+opacity:.9;
+
+pointer-events:none;
+
+}
+
+.bgLeafLeft{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:220px;
+
+opacity:.95;
+
+pointer-events:none;
+
+}
+
+.bgLeafBottom{
+
+position:fixed;
+
+left:0;
+
+bottom:0;
+
+width:220px;
+
+opacity:.95;
+
+pointer-events:none;
+
+}
+
+.bgHoneycomb{
+
+position:fixed;
+
+right:0;
+
+bottom:120px;
+
+width:180px;
+
+opacity:.18;
+
+pointer-events:none;
 
 }
 
@@ -216,13 +495,13 @@ footer{
 
 margin-top:70px;
 
-padding:40px 20px;
+padding:35px;
 
 text-align:center;
 
-color:#666;
+font-size:16px;
 
-font-size:15px;
+color:#666;
 
 }
 
@@ -230,17 +509,31 @@ footer strong{
 
 color:#157347;
 
+font-size:20px;
+
 }
 
-@media(max-width:768px){
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero h2{
+
+font-size:24px;
+
+}
 
 .card{
 
 flex-direction:column;
 
-text-align:center;
-
 gap:20px;
+
+text-align:center;
 
 }
 
@@ -250,188 +543,534 @@ flex-direction:column;
 
 }
 
-header h1{
+.info h3{
 
-font-size:32px;
+font-size:24px;
+
+}
+
+.viewBtn{
+
+width:100%;
+
+text-align:center;
 
 }
 
 }
-
 </style>
-
 </head>
 
 <body>
 
-<header>
-
-<img src="logo.webp">
-
-<h1>Bharat Bee</h1>
-
-<p>Certified Lab Test Reports</p>
-
-</header>
-
-<div class="search">
-
-<input type="text" id="search" placeholder="Search Honey Report...">
-
-</div>
+<!-- Background Decorations -->
+<img class="bgLeafLeft" src="https://i.imgur.com/SkmKX4N.png">
+<img class="bgLeafBottom" src="https://i.imgur.com/SkmKX4N.png">
+<img class="bgHoney" src="https://i.imgur.com/WVhV8mE.png">
+<img class="bgHoneycomb" src="https://i.imgur.com/GGd9j8A.png">
 
 <div class="container">
 
-<!-- REPORTS START -->
-    <div class="card">
-<div class="left">
-<div class="icon">🍯</div>
-<div>
-<h2>Ajwain Honey</h2>
-<span>Equinox Labs Certified Report</span>
+<div class="hero">
+
+<img src="logo.webp" class="logo">
+
+<h1>Bharat Bee</h1>
+
+<h2>Certified Lab Test Reports</h2>
+
 </div>
+
+<div class="searchBox">
+
+<input
+type="text"
+id="search"
+placeholder="Search Honey Report..."
+onkeyup="searchReport()">
+
 </div>
-<a class="btn" href="Ajwain Honey.pdf" target="_blank">View Report</a>
-</div>
+
+<div id="reportList">
+
+<!-- Ajwain -->
 
 <div class="card">
+
 <div class="left">
-<div class="icon">🍯</div>
-<div>
-<h2>Himalayan Forest Honey</h2>
-<span>Equinox Labs Certified Report</span>
+
+<div class="labIcon">
+
+<img src="lab-icon.png">
+
 </div>
+
+<div class="info">
+
+<h3>Ajwain Honey</h3>
+
+<p>Equinox Labs Certified Report</p>
+
+<div class="badges">
+
+<span>✔ Certified</span>
+
+<span>🧪 Lab Tested</span>
+
 </div>
-<a class="btn" href="Himalayan Forest Honey.pdf" target="_blank">View Report</a>
+
 </div>
+
+</div>
+
+<a class="viewBtn" href="Ajwain Honey.pdf" target="_blank">
+
+View Report
+
+</a>
+
+</div>
+
+<!-- Himalayan -->
 
 <div class="card">
+
 <div class="left">
-<div class="icon">🍯</div>
-<div>
-<h2>Mustard Honey</h2>
-<span>Equinox Labs Certified Report</span>
+
+<div class="labIcon">
+
+<img src="lab-icon.png">
+
 </div>
+
+<div class="info">
+
+<h3>Himalayan Forest Honey</h3>
+
+<p>Equinox Labs Certified Report</p>
+
+<div class="badges">
+
+<span>✔ Certified</span>
+
+<span>🧪 Lab Tested</span>
+
 </div>
-<a class="btn" href="Mustard Honey.pdf" target="_blank">View Report</a>
+
 </div>
+
+</div>
+
+<a class="viewBtn"
+href="Himalayan Forest Honey.pdf"
+target="_blank">
+
+View Report
+
+</a>
+
+</div>
+
+<!-- Mustard -->
 
 <div class="card">
+
 <div class="left">
-<div class="icon">🍯</div>
-<div>
-<h2>Lychee Honey</h2>
-<span>Equinox Labs Certified Report</span>
+
+<div class="labIcon">
+
+<img src="lab-icon.png">
+
 </div>
+
+<div class="info">
+
+<h3>Mustard Honey</h3>
+
+<p>Equinox Labs Certified Report</p>
+
+<div class="badges">
+
+<span>✔ Certified</span>
+
+<span>🧪 Lab Tested</span>
+
 </div>
-<a class="btn" href="Lychee Honey.pdf" target="_blank">View Report</a>
+
 </div>
+
+</div>
+
+<a class="viewBtn"
+href="Mustard Honey.pdf"
+target="_blank">
+
+View Report
+
+</a>
+
+</div>
+<!-- Lychee -->
 
 <div class="card">
+
 <div class="left">
-<div class="icon">🍯</div>
-<div>
-<h2>Jamun Honey</h2>
-<span>Equinox Labs Certified Report</span>
+
+<div class="labIcon">
+
+<img src="lab-icon.png">
+
 </div>
+
+<div class="info">
+
+<h3>Lychee Honey</h3>
+
+<p>Equinox Labs Certified Report</p>
+
+<div class="badges">
+
+<span>✔ Certified</span>
+
+<span>🧪 Lab Tested</span>
+
 </div>
-<a class="btn" href="Jamun Honey.pdf" target="_blank">View Report</a>
+
 </div>
+
+</div>
+
+<a class="viewBtn" href="Lychee Honey.pdf" target="_blank">
+
+View Report
+
+</a>
+
+</div>
+
+
+<!-- Jamun -->
 
 <div class="card">
+
 <div class="left">
-<div class="icon">🍯</div>
-<div>
-<h2>Sunflower Honey</h2>
-<span>Equinox Labs Certified Report</span>
+
+<div class="labIcon">
+
+<img src="lab-icon.png">
+
 </div>
+
+<div class="info">
+
+<h3>Jamun Honey</h3>
+
+<p>Equinox Labs Certified Report</p>
+
+<div class="badges">
+
+<span>✔ Certified</span>
+
+<span>🧪 Lab Tested</span>
+
 </div>
-<a class="btn" href="Sunflower Honey.pdf" target="_blank">View Report</a>
+
 </div>
+
+</div>
+
+<a class="viewBtn" href="Jamun Honey.pdf" target="_blank">
+
+View Report
+
+</a>
+
+</div>
+
+
+<!-- Sunflower -->
 
 <div class="card">
+
 <div class="left">
-<div class="icon">🍯</div>
-<div>
-<h2>Tulsi Honey</h2>
-<span>Equinox Labs Certified Report</span>
+
+<div class="labIcon">
+
+<img src="lab-icon.png">
+
 </div>
+
+<div class="info">
+
+<h3>Sunflower Honey</h3>
+
+<p>Equinox Labs Certified Report</p>
+
+<div class="badges">
+
+<span>✔ Certified</span>
+
+<span>🧪 Lab Tested</span>
+
 </div>
-<a class="btn" href="Tulsi Honey.pdf" target="_blank">View Report</a>
+
 </div>
+
+</div>
+
+<a class="viewBtn" href="Sunflower Honey.pdf" target="_blank">
+
+View Report
+
+</a>
+
+</div>
+
+
+<!-- Tulsi -->
 
 <div class="card">
+
 <div class="left">
-<div class="icon">🍯</div>
-<div>
-<h2>Coriander Honey</h2>
-<span>Equinox Labs Certified Report</span>
+
+<div class="labIcon">
+
+<img src="lab-icon.png">
+
 </div>
+
+<div class="info">
+
+<h3>Tulsi Honey</h3>
+
+<p>Equinox Labs Certified Report</p>
+
+<div class="badges">
+
+<span>✔ Certified</span>
+
+<span>🧪 Lab Tested</span>
+
 </div>
-<a class="btn" href="Coriander Honey.pdf" target="_blank">View Report</a>
+
 </div>
+
+</div>
+
+<a class="viewBtn" href="Tulsi Honey.pdf" target="_blank">
+
+View Report
+
+</a>
+
+</div>
+
+
+<!-- Coriander -->
 
 <div class="card">
+
 <div class="left">
-<div class="icon">🍯</div>
-<div>
-<h2>Fennel Honey</h2>
-<span>Equinox Labs Certified Report</span>
+
+<div class="labIcon">
+
+<img src="lab-icon.png">
+
 </div>
+
+<div class="info">
+
+<h3>Coriander Honey</h3>
+
+<p>Equinox Labs Certified Report</p>
+
+<div class="badges">
+
+<span>✔ Certified</span>
+
+<span>🧪 Lab Tested</span>
+
 </div>
-<a class="btn" href="Fennel Honey.pdf" target="_blank">View Report</a>
+
 </div>
+
+</div>
+
+<a class="viewBtn" href="Coriander Honey.pdf" target="_blank">
+
+View Report
+
+</a>
+
+</div>
+
+
+<!-- Fennel -->
 
 <div class="card">
+
 <div class="left">
-<div class="icon">🍯</div>
-<div>
-<h2>Sesame Honey</h2>
-<span>Equinox Labs Certified Report</span>
+
+<div class="labIcon">
+
+<img src="lab-icon.png">
+
 </div>
+
+<div class="info">
+
+<h3>Fennel Honey</h3>
+
+<p>Equinox Labs Certified Report</p>
+
+<div class="badges">
+
+<span>✔ Certified</span>
+
+<span>🧪 Lab Tested</span>
+
 </div>
-<a class="btn" href="Sesame Honey.pdf" target="_blank">View Report</a>
+
 </div>
+
+</div>
+
+<a class="viewBtn" href="Fennel Honey.pdf" target="_blank">
+
+View Report
+
+</a>
+
+</div>
+
+
+<!-- Sesame -->
 
 <div class="card">
+
 <div class="left">
-<div class="icon">🍯</div>
-<div>
-<h2>Wild Forest Honey</h2>
-<span>Equinox Labs Certified Report</span>
+
+<div class="labIcon">
+
+<img src="lab-icon.png">
+
 </div>
-</div>
-<a class="btn" href="Wild Forest Honey.pdf" target="_blank">View Report</a>
+
+<div class="info">
+
+<h3>Sesame Honey</h3>
+
+<p>Equinox Labs Certified Report</p>
+
+<div class="badges">
+
+<span>✔ Certified</span>
+
+<span>🧪 Lab Tested</span>
+
 </div>
 
 </div>
+
+</div>
+
+<a class="viewBtn" href="Sesame Honey.pdf" target="_blank">
+
+View Report
+
+</a>
+
+</div>
+
+
+<!-- Wild Forest -->
+
+<div class="card">
+
+<div class="left">
+
+<div class="labIcon">
+
+<img src="lab-icon.png">
+
+</div>
+
+<div class="info">
+
+<h3>Wild Forest Honey</h3>
+
+<p>Equinox Labs Certified Report</p>
+
+<div class="badges">
+
+<span>✔ Certified</span>
+
+<span>🧪 Lab Tested</span>
+
+</div>
+
+</div>
+
+</div>
+
+<a class="viewBtn" href="Wild Forest Honey.pdf" target="_blank">
+
+View Report
+
+</a>
+
+</div>
+</div>
+
 <footer>
 
-<strong>Bharat Bee</strong><br><br>
+<div style="text-align:center;padding:40px 20px;">
+
+<img src="logo.webp" style="width:90px;margin-bottom:15px;">
+
+<h2 style="color:#157347;margin-bottom:10px;">
+
+Bharat Bee
+
+</h2>
+
+<p style="color:#666;font-size:16px;">
 
 Pure Honey • Pure Life
 
-<br><br>
+</p>
+
+<p style="margin-top:12px;color:#888;">
+
+Certified Lab Test Reports
+
+</p>
+
+<p style="margin-top:25px;color:#999;font-size:14px;">
 
 © 2026 Bharat Bee. All Rights Reserved.
 
+</p>
+
+</div>
+
 </footer>
+
+</div>
 
 <script>
 
-const search=document.getElementById("search");
+function searchReport(){
 
-search.addEventListener("keyup",function(){
-
-let value=this.value.toLowerCase();
+let input=document.getElementById("search").value.toLowerCase();
 
 let cards=document.querySelectorAll(".card");
 
 cards.forEach(function(card){
 
-let text=card.innerText.toLowerCase();
+let title=card.querySelector("h3").innerText.toLowerCase();
 
-if(text.indexOf(value)>-1){
+if(title.includes(input)){
 
 card.style.display="flex";
 
@@ -443,7 +1082,7 @@ card.style.display="none";
 
 });
 
-});
+}
 
 </script>
 
