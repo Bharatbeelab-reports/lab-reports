@@ -564,11 +564,12 @@ text-align:center;
 <body>
 
 <!-- Background Decorations -->
-<img class="bgLeafLeft" src="https://i.imgur.com/SkmKX4N.png">
-<img class="bgLeafBottom" src="https://i.imgur.com/SkmKX4N.png">
-<img class="bgHoney" src="https://i.imgur.com/WVhV8mE.png">
-<img class="bgHoneycomb" src="https://i.imgur.com/GGd9j8A.png">
-
+<img class="bgLeafLeft" src="leaf.png">
+<img class="bgLeafBottom" src="leaf.png">
+<img class="bgHoney" src="honey-drip.png">
+<img class="bgHoneycomb" src="honeycomb.png">
+<img class="bgDipper" src="honey-dipper.png">
+    
 <div class="container">
 
 <div class="hero">
@@ -1084,8 +1085,19 @@ card.style.display="none";
 
 }
 
+<script>
+// Search Function
+const search = document.getElementById("search");
+
+search.addEventListener("keyup", function () {
+    let value = this.value.toLowerCase();
+
+    document.querySelectorAll(".report-card").forEach(card => {
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(value) ? "flex" : "none";
+    });
+});
 </script>
 
 </body>
-
 </html>
